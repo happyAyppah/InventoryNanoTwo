@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/sixteen_dp"
+    tools:context=".DetailActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/two_zero_dp"
+        android:text="@string/book_details"
+        android:textColor="@color/black"
+        android:textSize="@dimen/two_zero_sp"
+        android:textStyle="bold" />
+
+    <LinearLayout style="@style/LinearLayoutStyle">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/book_name" />
+
+        <RelativeLayout style="@style/RelativeLayoutStyle">
+
+            <TextView
+                android:id="@+id/detail_name_text_view"
+                style="@style/DetailFieldStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayoutStyle">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/price" />
+
+        <RelativeLayout style="@style/RelativeLayoutStyle">
+
+            <TextView
+                android:id="@+id/detail_price_text_view"
+                style="@style/DetailFieldStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayoutStyle">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/quantity" />
+
+        <RelativeLayout style="@style/RelativeLayoutStyle">
+
+            <Button
+                android:id="@+id/decrease_button"
+                style="@style/QuantityButtonStyle"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="@dimen/two_zero_dp"
+                android:layout_marginLeft="@dimen/two_zero_dp"
+                android:layout_marginEnd="@dimen/sixteen_dp"
+                android:layout_marginRight="@dimen/sixteen_dp"
+                android:layout_toStartOf="@+id/detail_quantity_text_view"
+                android:layout_toLeftOf="@+id/detail_quantity_text_view"
+                android:background="@drawable/buttonact"
+                android:textColor="@color/black"
+                android:text="@string/less" />
+
+            <TextView
+                android:id="@+id/detail_quantity_text_view"
+                android:layout_width="@dimen/fifty_dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/increase_button"
+                style="@style/QuantityButtonStyle"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="@dimen/sixteen_dp"
+                android:layout_marginLeft="@dimen/sixteen_dp"
+                android:layout_marginEnd="@dimen/two_zero_dp"
+                android:layout_marginRight="@dimen/two_zero_dp"
+                android:layout_toEndOf="@+id/detail_quantity_text_view"
+                android:layout_toRightOf="@+id/detail_quantity_text_view"
+                android:background="@drawable/buttonact"
+                android:textColor="@color/black"
+                android:text="@string/more" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/sixteen_dp"
+        android:text="@string/supplier_details"
+        android:textColor="@color/black"
+        android:textSize="@dimen/two_two_sp"
+        android:textStyle="bold" />
+
+    <LinearLayout style="@style/LinearLayoutStyle">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/supplier_name" />
+
+        <RelativeLayout style="@style/RelativeLayoutStyle">
+
+            <TextView
+                android:id="@+id/detail_supplier_name_text_view"
+                style="@style/DetailFieldStyle" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayoutStyle">
+
+        <TextView
+            android:layout_marginTop="@dimen/fifteen_dp"
+            style="@style/CategoryStyle"
+            android:text="@string/supplier_phone_number" />
+
+        <RelativeLayout style="@style/RelativeLayoutStyle">
+
+            <TextView
+                android:layout_marginTop="@dimen/fifteen_dp"
+                android:id="@+id/detail_supplier_phone_number_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/order_button"
+                android:layout_toLeftOf="@id/order_button"
+                android:fontFamily="sans-serif-light"
+                android:gravity="end"
+                android:paddingEnd="@dimen/sixteen_dp"
+                android:paddingRight="@dimen/sixteen_dp"
+                android:textAppearance="?android:textAppearanceLarge" />
+
+            <ImageView
+                android:id="@+id/order_button"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="start"
+                android:layout_marginBottom="@dimen/sixteen_dp"
+                android:contentDescription="@string/phone_image"
+                android:focusable="false"
+                android:src="@drawable/ic_call_black" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/two_zero_dp"
+        android:text="@string/delete"
+        android:textColor="@color/black"
+        android:background="@drawable/buttonact"
+        android:textSize="@dimen/two_zero_sp" />
+</LinearLayout>

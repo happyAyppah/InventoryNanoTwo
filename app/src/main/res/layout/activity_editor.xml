@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/sixteen_dp"
+    android:orientation="vertical"
+    tools:context=".EditorActivity">
+
+    <TextView
+        style="@style/HeadingStyle"
+        android:text="@string/book_details" />
+
+    <LinearLayout style="@style/LinearLayoutStyle">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/book_name" />
+
+        <RelativeLayout style="@style/RelativeLayoutStyle">
+
+            <EditText
+                android:id="@+id/book_name_edit_text"
+                style="@style/EditorFieldStyle"
+                android:inputType="textCapWords" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayoutStyle">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/price" />
+
+        <RelativeLayout style="@style/RelativeLayoutStyle">
+
+            <EditText
+                android:id="@+id/book_price_edit_text"
+                style="@style/EditorFieldStyle"
+                android:inputType="number" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayoutStyle">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/quantity" />
+
+        <RelativeLayout style="@style/RelativeLayoutStyle">
+
+            <EditText
+                android:id="@+id/book_quantity_edit_text"
+                style="@style/EditorFieldStyle"
+                android:inputType="number" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/HeadingStyle"
+        android:text="@string/supplier_details" />
+
+    <LinearLayout style="@style/LinearLayoutStyle">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/supplier_name" />
+
+        <RelativeLayout style="@style/RelativeLayoutStyle">
+
+            <EditText
+                android:id="@+id/book_supplier_name"
+                style="@style/EditorFieldStyle"
+                android:inputType="textCapWords" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/LinearLayoutStyle">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/supplier_phone_number" />
+
+        <RelativeLayout style="@style/RelativeLayoutStyle">
+
+            <EditText
+                android:id="@+id/book_supplier_phone_number_edit_text"
+                style="@style/EditorFieldStyle"
+                android:inputType="phone" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
